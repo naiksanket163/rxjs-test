@@ -1,0 +1,15 @@
+<ul class="list-group" *ngIf="todoArrObs$ | async as todosArr; else noTodos">
+    <li *ngFor="let todo of todosArr"
+     class="list-group-item">
+       {{todo.title}}
+       
+       <strong>{{todo.completed}}</strong>
+    </li>
+</ul>
+
+
+<ng-template #noTodos>
+    <p class="alert alert-warning">
+        No TODOS !!!
+    </p>
+</ng-template>
