@@ -1,5 +1,5 @@
 <ul class="list-group" *ngIf="todoArrObs$ | async as todosArr; else noTodos">
-    <li *ngFor="let todo of todosArr"
+    <li *ngFor="let todo of todosArr trackby : trackById"
      class="list-group-item">
        {{todo.title}}
        

@@ -20,4 +20,8 @@ export class TodoscmpltComponent implements OnInit {
     this.todoArrObs$ = this._todoservice.getnotCompletedTodos()
   }
 
+  trackById(index : number, todo : Itodo){
+    return todo.id
+  }
+
 }
